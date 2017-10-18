@@ -29,6 +29,7 @@ if [ "$1" == "add" ]; then
   exit
 fi
 
+
 if [ "$1" == "" ]; then
   com=$(cat ~/.idioms|while read LINE;do
       echo $LINE|sed 's/\(\[.*\]\)/\\\\e[1;33m\1\\\\e[0;39m/g'|xargs echo -e
